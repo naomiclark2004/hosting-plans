@@ -54,7 +54,7 @@ function Plan(name,price,space,transfer, pages,discountMonths)
 var p1 = new Plan("Basic", 3.99, 100, 1000, 10, [0,7]);
 var p2 = new Plan("Profession", 5.99, 500, 5000, 50, [0,7,11]);
 var p3 = new Plan("Ultimate", 9.99, 2000, 20000, 500, [0,7]);
-  
+
   function closeCart() {
     document.getElementById("annual").style.width = "0";
     document.getElementById("annual").style.padding = "0";
@@ -80,3 +80,7 @@ function openCart() {
         document.getElementById("annual").style.opacity = "100%";
         document.getElementById("annual").style.transition = "all .1s";
 }
+
+
+
+

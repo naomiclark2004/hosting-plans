@@ -131,6 +131,28 @@ hr{
     background-color: black;
 }
 
+/* .custom{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px;
+    max-width: 200px;
+    background-color: maroon;
+    color: white;
+    margin: auto;
+    font-size: 25px;
+} */
+
+/* #button2{
+    background-color: rgb(218, 218, 218);
+    border: none;
+    margin-top: 20px; 
+    padding: 15px 15px;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    font-size: 15px;
+} */
+
 @media only screen and (max-width: 1024px) and (min-width: 427px){
     .plan1 {
         margin-bottom: 100px;
