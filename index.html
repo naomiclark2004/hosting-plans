@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Plans</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/Javascript" src="script.js"></script>
+</head>
+
+<div class="annual" id="annual">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
+    <h3>Summary</h3>
+    <hr>
+    <p id="subtotal"></p>
+    <p id="tax"></p>
+    <hr>
+    <p id="permo"></p>
+    <p id="discount"></p>
+    <p id="after"></p>
+    <p id="price"></p>
+    <hr>
+    <p id="total"></p>
+
+    <a href="http://example.org\" style="padding: 0;"></a>
+        <button id="button1">Proceed to Checkout</button>
+    </a>
+
+</div>
+
+<body>
+    <div class="main" id="main">
+        <div class="header">
+            <h1>Hosting Plans</h1>
+        </div>
+        <div class="container" id="container">
+            <!-- Basic -->
+            <div class="plan1">
+                <h1>Basic Plan</h1>
+                <ul>
+                    <li>Price: $3.99</li>
+                    <li>Space: 100 GB</li>
+                    <li>Transfer: 1000 GB/Mo</li>
+                    <li>Pages: 10</li>
+                    <li>Discount Months: January and August</li>
+                </ul>
+                <button id="button" onclick="p1.displayAnnual(); openCart();">Add to Cart</button>
+            </div>
+    
+            <!-- Professional -->
+            <div class="plan2">
+                <h1>Professional Plan</h1>
+                <ul>
+                    <li>Price: $5.99 </li>
+                    <li>Space: 500 GB</li>
+                    <li>Transfer: 5000 GB/Mo</li>
+                    <li>Pages: 50</li>
+                    <li>Discount Months: January, August, and December</li>
+                </ul>
+                <button id="button" onclick="p2.displayAnnual(); openCart();">Add to Cart</button>
+            </div>
+    
+            <!-- Ultimate -->
+            <div class="plan3">
+                <h1>Ultimate Plan</h1>
+                <ul>
+                    <li>Price: $9.99 </li>
+                    <li>Space: 2000 GB</li>
+                    <li>Transfer: 2000 GB/Mo</li>
+                    <li>Pages: 500</li>
+                    <li>Discount Months: January and August</li>
+                </ul>
+                <button id="button" onclick="p3.displayAnnual(); openCart();">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+<!-- <label for="length">Length of Plan</label><br><br>
+
+        <select id="length" name="length">
+          <option value="threemo">3 Months</option>
+          <option value="sixmo">6 Months</option>
+          <option value="twelvemo">12 Months</option>
+          <option value="twentyfourmo">24 Months</option>
+        </select><br>
+
+        <button id="button">Calculate Annual Price</button> -->
+
+    <!-- custom plan -->
+    <!-- form
+    Length of Plan 
+    drop down month options 
+    find final price-->
+    <!-- add to cart button-->
+    <!-- js funtion planCalc for  -->
+    <!-- find final price -->
+</body>
+
+</html>
