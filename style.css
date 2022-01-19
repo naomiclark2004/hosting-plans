@@ -1,0 +1,187 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+#main {
+    transition: margin-left, .5s;
+}
+
+ul{
+   padding-left: 20px;
+}
+
+#button{
+    background-color: rgb(218, 218, 218);
+    border: none;
+    margin-top: 20px; 
+    margin-left: 40px;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 15px;
+}
+
+#button1{
+    background-color: maroon;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px; 
+    margin-left: 40px;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.header{
+    margin-top: 100px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.header h1{
+    font-weight: lighter;
+    font-size: 40px;
+    margin-bottom: 0;
+    /* padding-top: 100px; */
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    flex-wrap: wrap;
+}
+
+.container h1{
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.plan1{
+    max-width: 250px;
+    max-height: 280px;
+    background-color: maroon;
+    padding: 20px 20px;
+    color: white;
+}
+
+
+.plan2{
+    max-width: 250px;
+    background-color: maroon;
+    padding: 20px 20px;
+    max-height: 270px;
+    color: white;
+}
+
+
+.plan3{
+    max-width: 250px;
+    max-height: 280px;
+    background-color: maroon;
+    padding: 20px 20px;
+    color: white;
+}
+
+.annual h3{
+    text-align: center;
+}
+
+.annual {
+    margin: auto;
+    background-color: rgb(235, 235, 235);
+    height: 100%;
+    color: #464646;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+}
+
+  
+.annual a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    font-weight: bolder;
+    color: maroon;
+}
+
+  
+ .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+hr{
+    border: black solid 1px;
+    background-color: black;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 427px){
+    .plan1 {
+        margin-bottom: 100px;
+    }
+
+    .plan2 {
+        margin-bottom: 100px;
+    }
+
+    .plan3 {
+        margin-bottom: 100px;
+    }
+
+    .annual a{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 426px){
+    .plan1 {
+        margin-bottom: 100px;
+        padding: 10px 10px;
+    }
+
+    .plan2 {
+        margin-bottom: 100px;
+        padding: 10px 10px;
+    }
+
+    .plan3 {
+        margin-bottom: 100px;
+        padding: 10px 10px;
+    }
+
+    .annual a{
+        font-size: 35px;
+    }
+
+    #button1{
+        background-color: maroon;
+        border: none;
+        color: white;
+        font-weight: bold;
+        margin-top: 20px; 
+        margin-left: 0px;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .annual {
+        overflow-y:visible;
+    }
+}
