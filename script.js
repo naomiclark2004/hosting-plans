@@ -51,6 +51,8 @@ function Plan(name,price,space,transfer, pages,discountMonths)
           } else if (z ==="Ultimate"){
             priceNow = p3.price;
             console.log(priceNow);
+          } else {
+            priceNow = 0;
           }
 
           var months = document.getElementById("customLength").selectedIndex;
@@ -68,6 +70,8 @@ function Plan(name,price,space,transfer, pages,discountMonths)
           } else if (chosenMonth === "24 Months"){    
             monthsNow = 24;
             console.log(monthsNow);
+          }else {
+            priceNow = 0;
           }
 
         var annualPrice = priceNow * monthsNow;

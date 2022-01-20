@@ -1,6 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+    margin: auto;
     /* overflow: hidden; */
 }
 
@@ -139,7 +139,7 @@ hr{
 .custom{
     display: flex;
     flex-direction: column;
-    padding: 75px 100px 50px;
+    padding: 50px 75px 25px;
     max-width: 300px;
     background-color: maroon;
     color: white;
@@ -158,17 +158,25 @@ hr{
     font-size: 15px;
 }
 
+select{
+    padding: 5px 10px;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 427px){
+    .container{
+        padding: 100px 0 50px;
+    }
+
     .plan1 {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     .plan2 {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     .plan3 {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     .annual a{
@@ -177,6 +185,14 @@ hr{
 }
 
 @media only screen and (max-width: 426px){
+    .header h1 {
+        margin: 20px 0;
+    }
+
+    .container{
+        padding: 50px 0 0;
+    }
+
     .plan1 {
         margin-bottom: 100px;
         padding: 10px 10px;
@@ -210,5 +226,24 @@ hr{
     }
     .annual {
         overflow-y:visible;
+    }
+
+    .custom{
+        max-width: 250px;
+        padding: 10px 15px;
+    }
+
+    #button{
+        padding: 10px 10px;
+        margin-top: 20px;
+        margin-left: 75px;
+    }
+
+    #button1{
+        padding: 10px 10px;
+    }
+
+    #button2{
+        padding: 10px 10px;
     }
 }
