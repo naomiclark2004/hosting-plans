@@ -61,7 +61,10 @@ function Plan(name,price,space,transfer, pages,discountMonths)
             console.log(monthsNow);
           } else if (chosenMonth === "6 Months"){    
             monthsNow = 6;
-            console.log(monthsNow);
+            console.log();
+          }else if (chosenMonth === "18 Months"){    
+              monthsNow = 18;
+              console.log(monthsNow);
           } else if (chosenMonth === "24 Months"){    
             monthsNow = 24;
             console.log(monthsNow);
@@ -72,7 +75,7 @@ function Plan(name,price,space,transfer, pages,discountMonths)
 
 
         console.log("Annual Price " + priceAnnual);
-            document.getElementById("price").innerHTML = "Annual Price : $" + priceAnnual;
+            document.getElementById("price").innerHTML = monthsNow + " Months : $" + priceAnnual;
             document.getElementById("subtotal").innerHTML = "Subtotal Price : $" + priceAnnual;
             document.getElementById("subtotal").style.fontWeight = "bold";
             document.getElementById("subtotal").style.fontSize = "20px";

@@ -131,6 +131,11 @@ hr{
     background-color: black;
 }
 
+.custom h1{
+    font-weight: lighter;
+    font-size: 30px;
+}
+
 .custom{
     display: flex;
     flex-direction: column;
