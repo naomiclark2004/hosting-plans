@@ -8,7 +8,6 @@ function Plan(name,price,space,transfer, pages,discountMonths)
     this.discountMonths = discountMonths;
     Plan.prototype.calcAnnual=function(percentIfDisc)
     {
-        // calculate the price for a given onject and give discount if there is one
         var bestPrice = this.price;
         document.getElementById("permo").innerHTML = "Price: $" + this.price + " /mo";
         console.log("Price " + bestPrice);
@@ -35,93 +34,102 @@ function Plan(name,price,space,transfer, pages,discountMonths)
         return bestPrice * 12;
     }
 
+// cacluate price for given given plan and month then display custom options in annual div
     Plan.prototype.customOptions=function(){
         var x = document.getElementById("planOptions").selectedIndex;
         var y = document.getElementById("planOptions").options;
-        console.log(x);
-        console.log(y);
         var z = y[x].text;
-        console.log(z);
           if (z ==="Basic"){    
             priceNow = p1.price;
-            console.log(priceNow);
           } else if (z ==="Professional"){
               priceNow = p2.price;
-              console.log(priceNow);
           } else if (z ==="Ultimate"){
             priceNow = p3.price;
-            console.log(priceNow);
           } else {
-            priceNow = 0;
+            priceNow = "0.00";
           }
+          console.log(priceNow)
 
           var months = document.getElementById("customLength").selectedIndex;
           var num = document.getElementById("customLength").options;
           var chosenMonth = num[months].text;
           if (chosenMonth === "3 Months"){    
             monthsNow = 3;
-            console.log(monthsNow);
           } else if (chosenMonth === "6 Months"){    
             monthsNow = 6;
-            console.log();
           }else if (chosenMonth === "18 Months"){    
               monthsNow = 18;
-              console.log(monthsNow);
           } else if (chosenMonth === "24 Months"){    
             monthsNow = 24;
-            console.log(monthsNow);
           }else {
-            priceNow = 0;
+            monthsNow = 0;
+            chosenMonth = "Zero Months";
           }
 
-        var annualPrice = priceNow * monthsNow;
-        var priceAnnual = annualPrice.toFixed(2);
+        var totalPrice = priceNow * monthsNow;
+        var priceTotal = totalPrice.toFixed(2);
+
+          
+        console.log("Annual Price " + priceTotal);
+        document.getElementById("name").innerHTML = this.name + " Plan";
+        document.getElementById("name").style.fontSize = "20px";
+        document.getElementById("name").style.fontWeight = "bold";
+        document.getElementById("subtotal").innerHTML = "Subtotal Price : $" + priceTotal;
+        document.getElementById("subtotal").style.fontWeight = "bold";
+        document.getElementById("subtotal").style.fontSize = "20px";
+        document.getElementById("tax").innerHTML = "Tax: $0.00";
+        document.getElementById("discount").innerHTML = "";
+        document.getElementById("permo").innerHTML = "Price: $" + priceNow + " /mo";
+        document.getElementById("after").innerHTML = "";
+        document.getElementById("price").innerHTML = chosenMonth + ": $" + priceTotal;
+        document.getElementById("total").innerHTML = "Order Total: $" + priceTotal;
+        document.getElementById("total").style.fontWeight = "bold";
+        document.getElementById("total").style.fontSize = "20px";
 
 
-        console.log("Annual Price " + priceAnnual);
-            document.getElementById("price").innerHTML = monthsNow + " Months : $" + priceAnnual;
-            document.getElementById("subtotal").innerHTML = "Subtotal Price : $" + priceAnnual;
-            document.getElementById("subtotal").style.fontWeight = "bold";
-            document.getElementById("subtotal").style.fontSize = "20px";
-            document.getElementById("total").innerHTML = "Order Total: $" + priceAnnual;
-            document.getElementById("total").style.fontWeight = "bold";
-            document.getElementById("total").style.fontSize = "20px";
-            document.getElementById("tax").innerHTML = "Tax: $0.00";
 
     }
+    // display annual in annual div
 
     Plan.prototype.displayAnnual=function(){
         var annualPrice = this.calcAnnual(.80);
         var priceAnnual = annualPrice.toFixed(2);
             console.log("Annual Price " + priceAnnual);
-            document.getElementById("price").innerHTML = "Annual Price : $" + priceAnnual;
+            document.getElementById("name").style.fontWeight = "bold";
+            document.getElementById("name").innerHTML = this.name + " Plan";
+            document.getElementById("name").style.fontSize = "20px";
             document.getElementById("subtotal").innerHTML = "Subtotal Price : $" + priceAnnual;
             document.getElementById("subtotal").style.fontWeight = "bold";
             document.getElementById("subtotal").style.fontSize = "20px";
+            document.getElementById("tax").innerHTML = "Tax: $0.00";
+            document.getElementById("discount").innerHTML = "Discount: 8%";
+            document.getElementById("price").innerHTML = "Annual Price : $" + priceAnnual;
             document.getElementById("total").innerHTML = "Order Total: $" + priceAnnual;
             document.getElementById("total").style.fontWeight = "bold";
             document.getElementById("total").style.fontSize = "20px";
-            document.getElementById("tax").innerHTML = "Tax: $0.00";
-            document.getElementById("discount").innerHTML = "Discount: 8%";
     }
 }
 
+// objects
 
 var p1 = new Plan("Basic", 3.99, 100, 1000, 10, [0,7]);
 var p2 = new Plan("Profession", 5.99, 500, 5000, 50, [0,7,11]);
 var p3 = new Plan("Ultimate", 9.99, 2000, 20000, 500, [0,7]);
 var p4 = new Plan("Custom", 0.00, 000, 000, 0, [0,0]);
 
-  function closeCart() {
-    document.getElementById("annual").style.width = "0";
-    document.getElementById("annual").style.padding = "0";
-    document.getElementById("main").style.marginRight= "0";
-    document.getElementById("annual").style.opacity = "0";
-    document.getElementById("annual").style.transition = "opacity .0s";
+
+// close cart (annual div)
+function closeCart() {
+  document.getElementById("annual").style.width = "0";
+  document.getElementById("annual").style.padding = "0";
+  document.getElementById("main").style.marginRight= "0";
+  document.getElementById("annual").style.opacity = "0";
+  document.getElementById("annual").style.transition = "opacity .0s";
 }
 
+// open cart (annual div)
 function openCart() {
-    const mediaQuery = window.matchMedia('(max-width: 426px)')
+  const mediaQuery = window.matchMedia('(max-width: 426px)')
     if (mediaQuery.matches) {
         document.getElementById("annual").style.width = "86%";
         document.getElementById("annual").style.height = "100%";
