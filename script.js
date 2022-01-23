@@ -130,19 +130,21 @@ function closeCart() {
 // open cart (annual div)
 function openCart() {
   const mediaQuery = window.matchMedia('(max-width: 426px)')
-    if (mediaQuery.matches) {
-        document.getElementById("annual").style.width = "86%";
-        document.getElementById("annual").style.height = "100%";
-        document.getElementById("annual").style.padding = "25px 50px";
-        document.getElementById("annual").style.opacity = "100%";
-        document.getElementById("annual").style.transition = "all .1s";
-    
-    }else
-        document.getElementById("annual").style.width = "250px";
-        document.getElementById("annual").style.height = "100%";
-        document.getElementById("annual").style.padding = "50px 30px";
-        document.getElementById("main").style.marginRight = "260px";
-        document.getElementById("annual").style.opacity = "100%";
-        document.getElementById("annual").style.transition = "all .1s";
+  if (mediaQuery.matches) {
+    document.getElementById("annual").style.width = "86%";
+    document.getElementById("annual").style.height = "100%";
+    document.getElementById("annual").style.padding = "25px 50px";
+    document.getElementById("annual").style.opacity = "100%";
+    document.getElementById("annual").style.transition = "all .1s";
+
+} else
+    document.getElementById("annual").style.width = "250px";
+    document.getElementById("annual").style.height = "100%";
+    document.getElementById("annual").style.padding = "50px 30px";
+    document.getElementById("main").style.marginRight = "310px";
+    document.getElementById("custom").style.width = "250px";
+    document.getElementById("custom").style.padding = "25px 40px";
+    document.getElementById("annual").style.opacity = "100%";
+    document.getElementById("annual").style.transition = "all .1s";
 }
 
