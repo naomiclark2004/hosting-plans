@@ -56,6 +56,7 @@ hr{
     text-align: center;
     text-decoration: none;
     font-size: 15px;
+    border-radius: 7.5px;
 }
 
 #main {
@@ -92,11 +93,23 @@ ul{
    padding-left: 20px;
 }
 
+/* ul:nth-child(2) li:before {
+     content:"\2714\0020"; 
+} */
+
+ul {
+    list-style-type: '\2713   ';
+}
+
+li::marker{
+    font-weight: bold;
+}
 .plan1{
     max-width: 250px;
-    max-height: 280px;
+    /* max-height: 280px; */
     background-color: maroon;
-    padding: 20px 20px;
+    padding: 25px 40px;
+    border-radius: 20px;
     color: white;
 }
 
@@ -104,17 +117,19 @@ ul{
 .plan2{
     max-width: 250px;
     background-color: maroon;
-    padding: 20px 20px;
-    max-height: 270px;
+    padding: 25px 40px;
+    /* max-height: 280px; */
+    border-radius: 20px;
     color: white;
 }
 
 
 .plan3{
     max-width: 250px;
-    max-height: 280px;
+    /* max-height: 280px; */
     background-color: maroon;
-    padding: 20px 20px;
+    padding: 25px 40px;
+    border-radius: 20px;
     color: white;
 }
 
@@ -128,17 +143,20 @@ ul{
     text-decoration: none;
     /* display: inline-block; */
     font-size: 15px;
+    border-radius: 5px;
 }
 
 .custom{
     display: flex;
     flex-direction: column;
-    padding: 50px 75px 25px;
+    padding: 50px 75px 50px;
     max-width: 300px;
     background-color: maroon;
     color: white;
     margin: auto;
     font-size: 25px;
+    border-radius: 30px;
+    margin-bottom: 50px;
 }
   
 .custom h1{
@@ -148,6 +166,7 @@ ul{
 
 select{
     padding: 5px 10px;
+    border-radius: 5px;
 }
 
 #button2{
@@ -159,6 +178,7 @@ select{
     margin: auto;
     text-decoration: none;
     font-size: 15px;
+    border-radius: 5px;
 }
 
 
@@ -182,6 +202,12 @@ select{
 
     .plan3 {
         margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 427px){
+    .custom{
+        max-width: 400px;
     }
 }
 
@@ -218,17 +244,17 @@ select{
 
     .plan1 {
         margin-bottom: 100px;
-        padding: 10px 10px;
+        padding: 15px 30px;
     }
 
     .plan2 {
         margin-bottom: 100px;
-        padding: 10px 10px;
+        padding: 15px 30px;
     }
 
     .plan3 {
         margin-bottom: 100px;
-        padding: 10px 10px;
+        padding: 15px 30px;
     }
 
     #button{
@@ -239,10 +265,12 @@ select{
 
     .custom{
         max-width: 250px;
-        padding: 10px 15px;
+        padding: 15px 30px;
+        border-radius: 20px;
     }
 
     #button2{
         padding: 10px 10px;
     }
 }
+
